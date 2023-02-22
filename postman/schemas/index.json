@@ -1,0 +1,1437 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "PMCU Backend",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://example.com",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/accounts/{accountNumber}/statement/latest": {
+      "get": {
+        "tags": [
+          "Statement"
+        ],
+        "summary": "Latest",
+        "operationId": "Latest",
+        "parameters": [
+          {
+            "name": "accountNumber",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "example": "{\n    \"period\": \"latest\",\n    \"balance\": {\n        \"opening\": 938.44,\n        \"closing\": 177.02\n    },\n    \"money\": {\n        \"in\": 497.77,\n        \"out\": 122.32\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Fri Sep 09 2022 03:26:44 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Beatty - Gulgowski\",\n            \"type\": \"invoice\",\n            \"amount\": 752.38,\n            \"balance\": 570.82\n        },\n        {\n            \"date\": \"Fri Sep 09 2022 08:08:28 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Jacobi and Sons\",\n            \"type\": \"deposit\",\n            \"amount\": 27.32,\n            \"balance\": 552.00\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 18:22:15 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Koch, Hayes and Funk\",\n            \"type\": \"deposit\",\n            \"amount\": 722.24,\n            \"balance\": 948.87\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 12:17:09 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Barrows - Goodwin\",\n            \"type\": \"payment\",\n            \"amount\": 730.83,\n            \"balance\": 834.57\n        },\n        {\n            \"date\": \"Fri Sep 09 2022 04:10:57 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Schultz Group\",\n            \"type\": \"deposit\",\n            \"amount\": 77.47,\n            \"balance\": 736.03\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 13:13:23 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Heaney - Johns\",\n            \"type\": \"invoice\",\n            \"amount\": 131.69,\n            \"balance\": 216.01\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 10:29:08 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Cormier, Fahey and Auer\",\n            \"type\": \"deposit\",\n            \"amount\": 284.15,\n            \"balance\": 820.06\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 09:55:56 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Cummerata, Gutmann and Hansen\",\n            \"type\": \"withdrawal\",\n            \"amount\": 208.01,\n            \"balance\": 318.22\n        },\n        {\n            \"date\": \"Fri Sep 09 2022 01:45:09 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Jaskolski - Pfannerstill\",\n            \"type\": \"invoice\",\n            \"amount\": 919.97,\n            \"balance\": 425.19\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 22:45:12 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Lesch Inc\",\n            \"type\": \"withdrawal\",\n            \"amount\": 396.30,\n            \"balance\": 18.17\n        }\n    ]\n}"
+                },
+                "example": "{\n    \"period\": \"latest\",\n    \"balance\": {\n        \"opening\": 229.09,\n        \"closing\": 114.37\n    },\n    \"money\": {\n        \"in\": 405.55,\n        \"out\": 58.49\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Fri Sep 09 2022 00:13:34 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Gutkowski Inc\",\n            \"type\": \"deposit\",\n            \"amount\": 533.72,\n            \"balance\": 559.13\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 14:06:55 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Monahan - Abshire\",\n            \"type\": \"payment\",\n            \"amount\": 552.47,\n            \"balance\": 228.72\n        },\n        {\n            \"date\": \"Fri Sep 09 2022 07:37:36 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Stamm - Bode\",\n            \"type\": \"invoice\",\n            \"amount\": 704.31,\n            \"balance\": 646.78\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 08:32:24 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Schuppe, Schmeler and Bradtke\",\n            \"type\": \"invoice\",\n            \"amount\": 460.60,\n            \"balance\": 381.84\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 22:40:33 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Senger - Flatley\",\n            \"type\": \"withdrawal\",\n            \"amount\": 153.90,\n            \"balance\": 584.57\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 09:34:10 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Ledner - Kub\",\n            \"type\": \"payment\",\n            \"amount\": 777.98,\n            \"balance\": 834.95\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 12:43:33 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Kuphal - Bednar\",\n            \"type\": \"withdrawal\",\n            \"amount\": 854.26,\n            \"balance\": 946.01\n        },\n        {\n            \"date\": \"Fri Sep 09 2022 01:06:26 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Hessel and Sons\",\n            \"type\": \"invoice\",\n            \"amount\": 792.48,\n            \"balance\": 514.68\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 09:20:02 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Funk, Tillman and Bechtelar\",\n            \"type\": \"payment\",\n            \"amount\": 439.31,\n            \"balance\": 706.55\n        },\n        {\n            \"date\": \"Fri Sep 09 2022 07:56:41 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Tillman Group\",\n            \"type\": \"deposit\",\n            \"amount\": 478.83,\n            \"balance\": 956.33\n        }\n    ]\n}"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/accounts/{accountNumber}/statement/date": {
+      "get": {
+        "tags": [
+          "Statement"
+        ],
+        "summary": "Date",
+        "operationId": "Date",
+        "parameters": [
+          {
+            "name": "accountNumber",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Mon, 14 Jun 2021 14:30:25 GMT"
+                  }
+                }
+              },
+              "Transfer-Encoding": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "chunked"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "close"
+                  }
+                }
+              },
+              "Server": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "nginx"
+                  }
+                }
+              },
+              "x-srv-trace": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "v=1;t=d33d68b932344fce"
+                  }
+                }
+              },
+              "x-srv-span": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "v=1;s=210e5b055e5bd71e"
+                  }
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "*"
+                  }
+                }
+              },
+              "X-RateLimit-Limit": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "120"
+                  }
+                }
+              },
+              "X-RateLimit-Remaining": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "119"
+                  }
+                }
+              },
+              "X-RateLimit-Reset": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "1623681083"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+                  }
+                }
+              },
+              "Vary": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Accept-Encoding"
+                  }
+                }
+              },
+              "Content-Encoding": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "gzip"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string",
+                  "example": "{\n    \"period\": {\n        \"from\": \"Mon Jul 25 2022 08:09:59 GMT-0500 (Central Daylight Time)\",\n        \"to\": \"Fri Sep 09 2022 03:14:45 GMT-0500 (Central Daylight Time)\"\n    },\n    \"balance\": {\n        \"opening\": 184.43,\n        \"closing\": 432.96\n    },\n    \"money\": {\n        \"in\": 445.90,\n        \"out\": 55.31\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Thu Sep 08 2022 14:46:40 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Luettgen - Sawayn\",\n            \"type\": \"withdrawal\",\n            \"amount\": 638.50,\n            \"balance\": 194.64\n        },\n        {\n            \"date\": \"Fri Sep 09 2022 05:00:12 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Kirlin - Farrell\",\n            \"type\": \"withdrawal\",\n            \"amount\": 585.23,\n            \"balance\": 243.11\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 09:02:17 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Maggio - Roob\",\n            \"type\": \"deposit\",\n            \"amount\": 18.49,\n            \"balance\": 498.96\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 19:38:49 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Fadel, Hammes and Kub\",\n            \"type\": \"deposit\",\n            \"amount\": 127.58,\n            \"balance\": 63.21\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 19:23:53 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Wintheiser, Ortiz and Halvorson\",\n            \"type\": \"deposit\",\n            \"amount\": 863.66,\n            \"balance\": 613.92\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 11:47:09 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Schneider, Haley and Reichert\",\n            \"type\": \"payment\",\n            \"amount\": 712.18,\n            \"balance\": 484.51\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 13:32:39 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Durgan, Bayer and Ruecker\",\n            \"type\": \"payment\",\n            \"amount\": 885.97,\n            \"balance\": 158.01\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 08:40:46 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Kutch Group\",\n            \"type\": \"deposit\",\n            \"amount\": 778.92,\n            \"balance\": 686.18\n        },\n        {\n            \"date\": \"Fri Sep 09 2022 00:00:34 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Mueller Group\",\n            \"type\": \"payment\",\n            \"amount\": 908.44,\n            \"balance\": 480.16\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 15:21:49 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Willms, Schaden and Ondricka\",\n            \"type\": \"payment\",\n            \"amount\": 467.86,\n            \"balance\": 76.56\n        }\n    ]\n}"
+                },
+                "example": "{\n    \"period\": {\n        \"from\": \"Wed Nov 24 2021 20:03:53 GMT-0600 (Central Standard Time)\",\n        \"to\": \"Fri Sep 09 2022 05:45:18 GMT-0500 (Central Daylight Time)\"\n    },\n    \"balance\": {\n        \"opening\": 409.05,\n        \"closing\": 941.72\n    },\n    \"money\": {\n        \"in\": 996.41,\n        \"out\": 420.39\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Fri Sep 09 2022 02:04:20 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Bosco Inc\",\n            \"type\": \"payment\",\n            \"amount\": 582.00,\n            \"balance\": 128.78\n        },\n        {\n            \"date\": \"Fri Sep 09 2022 06:40:55 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Kuphal Inc\",\n            \"type\": \"payment\",\n            \"amount\": 297.22,\n            \"balance\": 501.88\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 09:40:19 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Ryan and Sons\",\n            \"type\": \"payment\",\n            \"amount\": 137.07,\n            \"balance\": 349.04\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 20:57:30 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Kessler LLC\",\n            \"type\": \"withdrawal\",\n            \"amount\": 930.63,\n            \"balance\": 231.66\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 08:37:07 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Frami Group\",\n            \"type\": \"withdrawal\",\n            \"amount\": 794.43,\n            \"balance\": 173.75\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 12:01:00 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Simonis - Ankunding\",\n            \"type\": \"invoice\",\n            \"amount\": 629.04,\n            \"balance\": 406.94\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 13:11:40 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Fay - Hane\",\n            \"type\": \"invoice\",\n            \"amount\": 123.25,\n            \"balance\": 450.59\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 23:36:56 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Johnston - Bartell\",\n            \"type\": \"invoice\",\n            \"amount\": 809.42,\n            \"balance\": 237.95\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 08:53:10 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Bernhard - Durgan\",\n            \"type\": \"payment\",\n            \"amount\": 486.38,\n            \"balance\": 933.59\n        },\n        {\n            \"date\": \"Thu Sep 08 2022 12:19:15 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Howe, Lueilwitz and O'Connell\",\n            \"type\": \"invoice\",\n            \"amount\": 530.31,\n            \"balance\": 942.32\n        }\n    ]\n}"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/accounts/create": {
+      "post": {
+        "tags": [
+          "Accounts"
+        ],
+        "summary": "Create",
+        "operationId": "Create",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRequest"
+              },
+              "example": {
+                "type": "Money Market Account",
+                "holder": "{{customerId}}"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "default": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/200OK"
+                },
+                "example": {
+                  "type": "Checking Account",
+                  "details": {
+                    "domestic": {
+                      "account": "13045851",
+                      "routing": "77612945"
+                    },
+                    "international": {
+                      "bic": "AJDEPFE1AIQ",
+                      "iban": "GL1595250003843178"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/accounts/{accountNumber}/overview": {
+      "get": {
+        "tags": [
+          "Accounts"
+        ],
+        "summary": "Overview",
+        "operationId": "Overview",
+        "parameters": [
+          {
+            "name": "accountNumber",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "example": "{\n    \"type\": \"Money Market Account\",\n    \"balance\": {\n        \"available\": 955.69,\n        \"present\": 30.24\n    },\n    \"details\": {\n        \"domestic\": {\n            \"account\": \"25983809\",\n            \"routing\": \"67802918\"\n        },\n        \"international\": {\n            \"bic\": \"XVKEBOE1535\",\n            \"iban\": \"SE2051380044044970668401\"\n        }\n    },\n    \"interestRate\": 0.01,\n    \"lastStatementDate\": \"Thu Sep 08 2022 09:08:49 GMT-0500 (Central Daylight Time)\"\n}"
+                },
+                "example": "{\n    \"type\": \"Savings Account\",\n    \"balance\": {\n        \"available\": 348.55,\n        \"present\": 876.27\n    },\n    \"details\": {\n        \"domestic\": {\n            \"account\": \"95352026\",\n            \"routing\": \"37651593\"\n        },\n        \"international\": {\n            \"bic\": \"EYJIAWT1617\",\n            \"iban\": \"HU88941939658500608900300878\"\n        }\n    },\n    \"interestRate\": 0.01,\n    \"lastStatementDate\": \"Thu Sep 08 2022 19:57:21 GMT-0500 (Central Daylight Time)\"\n}"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/create": {
+      "post": {
+        "tags": [
+          "Create"
+        ],
+        "summary": "New user",
+        "description": "Creates a new user in the system. The user will be assigned an ID automatically. This can be found in the response.",
+        "operationId": "Newuser",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "application/x-www-form-urlencoded"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "firstName",
+                  "lastName"
+                ],
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "type": "string",
+                    "description": "The user's first name (required)",
+                    "example": "Margot"
+                  },
+                  "lastName": {
+                    "type": "string",
+                    "description": "The user's last name (required)",
+                    "example": "Kutch"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "X-Powered-By": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Express"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "101"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "W/\"65-KsPJ95rCxmmvvRBY2Sqroxk2vmA\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Thu, 10 Jan 2019 23:58:59 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Newuser"
+                },
+                "example": {
+                  "status": "success",
+                  "firstName": "Ben",
+                  "lastName": "Smith",
+                  "id": "0729d37c-ef9f-4ffa-8f71-a6eedf1f95b7"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/get": {
+      "get": {
+        "tags": [
+          "Read"
+        ],
+        "summary": "Get all users",
+        "description": "Get all users in the system.",
+        "operationId": "Getallusers",
+        "parameters": [
+          {
+            "name": "all",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": true
+            }
+          },
+          {
+            "name": "key",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "{{key}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "X-Powered-By": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Express"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "105"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "W/\"69-ti7ujd/Cyb8EeoWoqRXh482Zy5o\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Fri, 11 Jan 2019 00:00:53 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/200OK1"
+                  },
+                  "description": "",
+                  "example": [
+                    {
+                      "status": "success"
+                    },
+                    {
+                      "firstName": "Ben",
+                      "lastName": "Smith",
+                      "id": "0729d37c-ef9f-4ffa-8f71-a6eedf1f95b7"
+                    }
+                  ]
+                },
+                "example": [
+                  {
+                    "status": "success"
+                  },
+                  {
+                    "firstName": "Ben",
+                    "lastName": "Smith",
+                    "id": "0729d37c-ef9f-4ffa-8f71-a6eedf1f95b7"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/update": {
+      "put": {
+        "tags": [
+          "Update"
+        ],
+        "summary": "Update user",
+        "description": "Send the keys that you'd like to update, this can be one or more of `firstName`, `lastName` and `password`.",
+        "operationId": "Updateuser",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The user's ID (required)",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "{{id}}"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "application/x-www-form-urlencoded"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "firstName"
+                ],
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "type": "string",
+                    "description": "The user's new first name",
+                    "example": "Benjamin"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "X-Powered-By": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Express"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "106"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "W/\"6a-SA9mzR+M2pmN7WPGgLm1ZqtRYis\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Fri, 11 Jan 2019 00:18:07 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Updateuser"
+                },
+                "example": {
+                  "status": "success",
+                  "firstName": "Benjamin",
+                  "lastName": "Smith",
+                  "id": "0729d37c-ef9f-4ffa-8f71-a6eedf1f95b7"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/delete": {
+      "delete": {
+        "tags": [
+          "Delete"
+        ],
+        "summary": "Delete user",
+        "description": "Deletes a user from the system by `id`.",
+        "operationId": "Deleteuser",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The user's ID",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "{{id}}"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "text/plain"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "X-Powered-By": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Express"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "64"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "W/\"40-bT/ASzl0KO3wj/eo2xEBaHPLnvk\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Fri, 11 Jan 2019 00:20:55 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Deleteuser"
+                },
+                "example": {
+                  "status": "success",
+                  "id": "0729d37c-ef9f-4ffa-8f71-a6eedf1f95b7"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/payments/{accountNumber}/payees": {
+      "get": {
+        "tags": [
+          "Payees"
+        ],
+        "summary": "List",
+        "operationId": "List",
+        "parameters": [
+          {
+            "name": "accountNumber",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "example": "[\n    {\n        \"name\": \"Dora Lowe\",\n        \"checking\": 39858026,\n        \"routing\": 63818580\n    },\n    {\n        \"name\": \"Lora Erdman\",\n        \"checking\": 61378872,\n        \"routing\": 09311060\n    },\n    {\n        \"name\": \"Garry Ullrich\",\n        \"checking\": 30229028,\n        \"routing\": 93927893\n    },\n    {\n        \"name\": \"Kelly Will\",\n        \"checking\": 65945758,\n        \"routing\": 49706737\n    },\n    {\n        \"name\": \"Roxanne Braun\",\n        \"checking\": 78198487,\n        \"routing\": 59280149\n    },\n    {\n        \"name\": \"Stuart Block\",\n        \"checking\": 54499488,\n        \"routing\": 65852964\n    },\n    {\n        \"name\": \"Carl Collins\",\n        \"checking\": 56354988,\n        \"routing\": 35980473\n    },\n    {\n        \"name\": \"Herbert Ward\",\n        \"checking\": 45322126,\n        \"routing\": 54549300\n    },\n    {\n        \"name\": \"Darla Nikolaus\",\n        \"checking\": 48112478,\n        \"routing\": 50258550\n    },\n    {\n        \"name\": \"Darrell Connelly\",\n        \"checking\": 26577632,\n        \"routing\": 13505812\n    }\n]"
+                },
+                "example": "[\n    {\n        \"name\": \"Carole Kuhn\",\n        \"checking\": 27332950,\n        \"routing\": 11838023\n    },\n    {\n        \"name\": \"Misty Legros III\",\n        \"checking\": 30700560,\n        \"routing\": 61933106\n    },\n    {\n        \"name\": \"Gretchen Farrell\",\n        \"checking\": 61389828,\n        \"routing\": 35909288\n    },\n    {\n        \"name\": \"Traci Hansen\",\n        \"checking\": 60963853,\n        \"routing\": 44355441\n    },\n    {\n        \"name\": \"Amos Grimes\",\n        \"checking\": 60889127,\n        \"routing\": 78395001\n    },\n    {\n        \"name\": \"Henry Bergnaum\",\n        \"checking\": 11676001,\n        \"routing\": 05367817\n    },\n    {\n        \"name\": \"Miranda Stanton\",\n        \"checking\": 84192294,\n        \"routing\": 09163860\n    },\n    {\n        \"name\": \"Kelley Larkin\",\n        \"checking\": 26829773,\n        \"routing\": 50795960\n    },\n    {\n        \"name\": \"Tommie Kertzmann\",\n        \"checking\": 21347323,\n        \"routing\": 46594817\n    },\n    {\n        \"name\": \"Genevieve Dietrich I\",\n        \"checking\": 45010767,\n        \"routing\": 57612886\n    }\n]"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/payments/{accountNumber}/payees/add": {
+      "post": {
+        "tags": [
+          "Payees"
+        ],
+        "summary": "Add",
+        "operationId": "Add",
+        "parameters": [
+          {
+            "name": "accountNumber",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string",
+                "example": "{\n    \"name\": \"Roberto Pfeffer\",\n    \"checking\": 10686551,\n    \"routing\": 16549823\n}"
+              },
+              "example": "{\n    \"name\": \"Janie Welch\",\n    \"checking\": 38902482,\n    \"routing\": 71082750\n}"
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/200OK2"
+                },
+                "example": {
+                  "payeeId": "eaf00206-b599-42d6-810d-93da0fa12bf7"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/payments/{accountNumber}/limits": {
+      "get": {
+        "tags": [
+          "Limits"
+        ],
+        "summary": "Current",
+        "operationId": "Current",
+        "parameters": [
+          {
+            "name": "accountNumber",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/200OK3"
+                },
+                "example": {
+                  "daily": 30000
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Limits"
+        ],
+        "summary": "Update",
+        "operationId": "Update",
+        "parameters": [
+          {
+            "name": "accountNumber",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRequest"
+              },
+              "example": {
+                "daily": 30000
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/200OK4"
+                },
+                "example": {
+                  "status": "success"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/payments/{accountNumber}/transfer": {
+      "post": {
+        "tags": [
+          "Payments"
+        ],
+        "summary": "Transfer",
+        "operationId": "Transfer",
+        "parameters": [
+          {
+            "name": "accountNumber",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransferRequest"
+              },
+              "example": {
+                "payeeId": "14e3ca0e-8738-4d9c-8150-824ad35b20cd",
+                "amount": "104.69",
+                "reference": "Earum eius quaerat.",
+                "date": "Fri Sep 09 2022 01:58:18 GMT-0500 (Central Daylight Time)"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "default": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/200OK5"
+                },
+                "example": {
+                  "transaction": "complete"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreateRequest": {
+        "title": "CreateRequest",
+        "required": [
+          "type",
+          "holder"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "holder": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "type": "Home Loan Account",
+          "holder": "{{customerId}}"
+        }
+      },
+      "200OK": {
+        "title": "200OK",
+        "required": [
+          "type",
+          "details"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "details": {
+            "$ref": "#/components/schemas/Details"
+          }
+        },
+        "example": {
+          "type": "Auto Loan Account",
+          "details": {
+            "domestic": {
+              "account": "22485071",
+              "routing": "99549649"
+            },
+            "international": {
+              "bic": "FYVAMLP1",
+              "iban": "IT87Y0073008036262Y06K62965"
+            }
+          }
+        }
+      },
+      "Details": {
+        "title": "Details",
+        "required": [
+          "domestic",
+          "international"
+        ],
+        "type": "object",
+        "properties": {
+          "domestic": {
+            "$ref": "#/components/schemas/Domestic"
+          },
+          "international": {
+            "$ref": "#/components/schemas/International"
+          }
+        },
+        "example": {
+          "domestic": {
+            "account": "02602713",
+            "routing": "45045747"
+          },
+          "international": {
+            "bic": "SIFESMY1",
+            "iban": "AE210772761700961655092"
+          }
+        }
+      },
+      "Domestic": {
+        "title": "Domestic",
+        "required": [
+          "account",
+          "routing"
+        ],
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "routing": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "account": "27013100",
+          "routing": "96068302"
+        }
+      },
+      "International": {
+        "title": "International",
+        "required": [
+          "bic",
+          "iban"
+        ],
+        "type": "object",
+        "properties": {
+          "bic": {
+            "type": "string"
+          },
+          "iban": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "bic": "TTGEART1",
+          "iban": "EE796776679961583268"
+        }
+      },
+      "Newuser": {
+        "title": "Newuser",
+        "required": [
+          "status",
+          "firstName",
+          "lastName",
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "status": "success",
+          "firstName": "Ben",
+          "lastName": "Smith",
+          "id": "0729d37c-ef9f-4ffa-8f71-a6eedf1f95b7"
+        }
+      },
+      "200OK1": {
+        "title": "200OK1",
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "status": "success"
+        }
+      },
+      "GetuserbyID": {
+        "title": "GetuserbyID",
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "status": "success"
+        }
+      },
+      "GetuserbyID(nouserfound)": {
+        "title": "GetuserbyID(nouserfound)",
+        "required": [
+          "status",
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "status": "no user found",
+          "id": "0729d37c-ef9f-4ffa-8f71-a6eedf1f95b"
+        }
+      },
+      "m200": {
+        "title": "m200",
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "status": "success"
+        }
+      },
+      "Updateuser": {
+        "title": "Updateuser",
+        "required": [
+          "status",
+          "firstName",
+          "lastName",
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "status": "success",
+          "firstName": "Benjamin",
+          "lastName": "Smith",
+          "id": "0729d37c-ef9f-4ffa-8f71-a6eedf1f95b7"
+        }
+      },
+      "Deleteuser": {
+        "title": "Deleteuser",
+        "required": [
+          "status",
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "status": "success",
+          "id": "0729d37c-ef9f-4ffa-8f71-a6eedf1f95b7"
+        }
+      },
+      "200OK2": {
+        "title": "200OK2",
+        "required": [
+          "payeeId"
+        ],
+        "type": "object",
+        "properties": {
+          "payeeId": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "payeeId": "d598957e-bd99-4c81-81f6-46c513ea8cbb"
+        }
+      },
+      "200OK3": {
+        "title": "200OK3",
+        "required": [
+          "daily"
+        ],
+        "type": "object",
+        "properties": {
+          "daily": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "daily": 30000
+        }
+      },
+      "UpdateRequest": {
+        "title": "UpdateRequest",
+        "required": [
+          "daily"
+        ],
+        "type": "object",
+        "properties": {
+          "daily": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "daily": 30000
+        }
+      },
+      "200OK4": {
+        "title": "200OK4",
+        "required": [
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "status": "success"
+        }
+      },
+      "TransferRequest": {
+        "title": "TransferRequest",
+        "required": [
+          "payeeId",
+          "amount",
+          "reference",
+          "date"
+        ],
+        "type": "object",
+        "properties": {
+          "payeeId": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "reference": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "payeeId": "635eb91d-83c4-47f5-bfb5-f2577a4c6b35",
+          "amount": "582.21",
+          "reference": "Nostrum ut blanditiis explicabo aliquid nesciunt.",
+          "date": "Thu Sep 08 2022 10:04:41 GMT-0500 (Central Daylight Time)"
+        }
+      },
+      "200OK5": {
+        "title": "200OK5",
+        "required": [
+          "transaction"
+        ],
+        "type": "object",
+        "properties": {
+          "transaction": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "transaction": "complete"
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Statement"
+    },
+    {
+      "name": "Accounts"
+    },
+    {
+      "name": "Create"
+    },
+    {
+      "name": "Read"
+    },
+    {
+      "name": "Update"
+    },
+    {
+      "name": "Delete"
+    },
+    {
+      "name": "Payees"
+    },
+    {
+      "name": "Limits"
+    },
+    {
+      "name": "Payments"
+    }
+  ]
+}
