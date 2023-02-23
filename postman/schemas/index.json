@@ -3,7 +3,8 @@
   "info": {
     "title": "PMCU Backend",
     "contact": {},
-    "version": "1.0"
+    "version": "1.0",
+    "description": "this is a desc"
   },
   "servers": [
     {
